@@ -1,7 +1,10 @@
 import React, { useState } from 'react';
+import Nav from "react-bootstrap/Nav";
+import Navbar from "react-bootstrap/Navbar";
 import { useNavigate } from 'react-router-dom';
 import { useSelector,useDispatch } from 'react-redux';
 import { logout,reset } from '../Features/Auth/AuthSlice';
+import logo from "../images/background.svg"
 import {
   MDBContainer,
   MDBNavbar,
@@ -27,7 +30,16 @@ import { Link } from 'react-router-dom';
   return (
     <MDBNavbar expand='lg' light bgColor='light'>
       <MDBContainer fluid>
-        <MDBNavbarBrand href='#'>Navbar</MDBNavbarBrand>
+        {/* <MDBNavbarBrand href='#'>Navbar</MDBNavbarBrand> */}
+        <Navbar.Brand href="#home">
+        <img
+          alt="logo"
+          src={logo}
+          width="100"
+          height="40"
+          className="d-inline-block align-top"
+        />
+      </Navbar.Brand>
         <MDBNavbarToggler
           type='button'
           aria-expanded='false'

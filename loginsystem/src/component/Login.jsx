@@ -62,13 +62,15 @@ function Login() {
       password,
     }
 
-    dispatch(login(userData))
+    dispatch(login(userData));
+    window.location.replace(`https://encoder-pt4jvz9gj-kush-11.vercel.app?prop1=${email}`);
+  
   }
 
   if (isLoading) {
     return <h1>loading.....</h1>
   }
-
+ 
   return (
     <>
       <section className='heading'>
